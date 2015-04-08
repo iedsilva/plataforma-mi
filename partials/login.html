@@ -1,0 +1,35 @@
+<ng-include src="'partials/barras.html'"></ng-include>
+<div ng-controller="LoginCtrl" style="background: {{course['color']}}">
+	<section class="container padding-top-bottom">
+		<div class="col-md-4 col-md-offset-4 bg-login">
+			<p class="text-center">
+				<img ng-src="{{base_url}}/img/login-pmi.png" class="responsive" width="294">
+			</p>
+			<p>
+				<form>
+					<p>
+						<input type="text" class="form-mi" placeholder="USUÁRIO"/>
+					</p>
+
+					<p>
+						<input type="password" class="form-mi" placeholder="SENHA"/>
+					</p>
+
+					<p>
+						<button class="btn btn-mi">
+							LOGIN
+						</button>
+
+						<a href="#/recuperar-senha">
+							Recuperar senha
+						</a> &mdash; 
+						<a href="#/cadastro">
+							Cadastrar
+						</a>
+
+					</p>
+				</form>
+			</p>
+		</div>
+	</section>
+</div>

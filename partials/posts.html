@@ -1,0 +1,37 @@
+<div ng-controller="PostListCtrl">
+	<p ng-show="msg" class="bg bg-success">
+		{{msg}}
+	</p>
+	<div class="br20"></div>	
+	<div class="panel panel-default" ng-repeat="e in posts">
+		<div class="panel-body">
+			<h1>
+				{{e.Post.title}}
+			</h1>
+			<p>
+				{{e.Post.body}}
+			</p>
+			<a href="javascript:;" class="btn btn-sm btn-default text-muted pull-right" ng-click="delPost($index)">
+				<i class="fa fa-trash"></i>
+			</a>
+			<a href="javascript:;" class="btn btn-sm btn-default text-muted pull-right" ng-click="editPost($index)">
+				<i class="fa fa-pencil-square-o"></i>
+			</a>
+		</div>
+		<div class="panel-footer">
+			<small>
+				{{e.Post.created}}
+			</small>
+		</div>
+	</div>
+	<div class="panel panel-default" ng-show="posts.length < 1">
+		<div class="panel-body">
+		Nenhum curso cadastrado.
+		</div>
+	</div>
+	<p>
+		<button type="button" class="btn btn-success" ng-click="addPost()">
+			<i class="icon-plus-sign"></i> Adicionar Curso
+		</button>
+	</p>
+</div>

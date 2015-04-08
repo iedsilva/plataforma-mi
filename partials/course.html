@@ -1,0 +1,22 @@
+<ng-include src="'partials/barras.html'"></ng-include>
+<div ng-controller="CourseCtrl" style="background: {{course['color']}}">
+	<section class="container padding-top-bottom">
+		<div class="col-md-6 text-white">
+			<h1>
+				{{course.name}}
+			</h1>	
+			<p>
+				{{course.description}}
+			</p>
+			<p>
+				<span class="extra-price">R$</span><span class="price">170</span><span class="extra-price">,00</span>
+			</p>
+			<p>
+				<button class="btn btn-matricular">Quero este curso</button>
+			</p>
+		</div>
+		<div class="col-md-6 text-center">
+			<img ng-src="{{base_url}}/img/{{course['img']}}" width="200	">
+		</div>
+	</section>
+</div>
